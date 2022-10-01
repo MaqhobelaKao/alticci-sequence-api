@@ -42,11 +42,11 @@ $$
 
 This service is using these technologies:
 
-![java version](https://img.shields.io/github/pipenv/locked/python-version/rarycoringa/alticci-sequence-service?color=lightgray&label=Java&logo=java&logoColor=white)
+![java 11](https://img.shields.io/github/pipenv/locked/python-version/rarycoringa/alticci-sequence-service?color=lightgray&label=java&logo=java&logoColor=white)
 ![spring version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/flask?color=lightgray&label=Springboot&logo=spring&logoColor=white)
 ![swagger version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/gunicorn?color=lightgray&label=swagger&logo=swagger&logoColor=white)
-![mvn --version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/redis?color=lightgray&label=Maven&logo=Maven&logoColor=white)
-![Pytest version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/dev/pytest?color=lightgray&label=Pytest&logo=pytest&logoColor=white)
+![maven --version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/redis?color=lightgray&label=Maven&logo=Maven&logoColor=white)
+![docker --version](https://img.shields.io/github/pipenv/locked/dependency-version/rarycoringa/alticci-sequence-service/dev/pytest?color=lightgray&label=docker&logo=docker&logoColor=white)
 
 ## Clone the repository
 
@@ -66,8 +66,17 @@ $ cd alticci-sequence-api
 
 If you just would like to use the service's resources, please make sure that Docker and docker-compose is installed and available on your local machine and then run this command on your bash:
 
+### Building the container for docker to run
+
 ```bash
 $ docker build --tag=alticci-service:latest .
+```
+
+### Running the container with docker client
+Please make sure that you have docker installed in linux machine to test these project
+
+```bash
+$ docker run -p 8080:8080 -t alticci-service 
 ```
 
 Presuming you don't have any resource running on the port `8080`, you are now able to use all the service's resources on your local machine.

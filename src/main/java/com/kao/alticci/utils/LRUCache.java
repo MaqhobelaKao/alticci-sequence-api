@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 public class LRUCache extends LinkedHashMap<Integer, Integer>  {
 
 	private static final long serialVersionUID = 1L;
-	private static int capacity = 3;
+	private static int capacity = 100;
 	
 	
 	@Override
